@@ -1,5 +1,6 @@
 from graphics import *
 from random import random
+import time
 import math
 
 '''
@@ -14,16 +15,22 @@ import math
 	Use a 100 x 100 grid with the walker beginning in the middle.
 '''
 
-height = 100
-width = 100
+height = 500
+width = 500
 
-win = GraphWin("Let's take a walk!", height, width)
-center = Point(height / 2, width / 2)
-center.draw(win)
 
+
+def gui():
+	win = GraphWin("Let's take a walk!", height, width)
+	win.setBackground("White")
+	center = Point(height / 2, width / 2)
+	center.draw(win)
 
 def generate_direction():
 	return random() * 2 * math.pi
 
 
 # Text user interface prototype
+gui()
+
+time.sleep(10)
