@@ -45,6 +45,9 @@ def ran_walk(steps, win, walker):
 	# Center
 	x = y = height / 2
 
+	# Loop over the number of steps, getting a new angle for each step
+	# and calculating new (x, y) coordinates to move to, then draw that
+	# line between the new (x, y) and the previous (x, y).
 	for i in range(steps):
 		angle = generate_direction()
 
@@ -52,7 +55,7 @@ def ran_walk(steps, win, walker):
 		y_change = math.sin(angle)
 
 		# this moves the walker, but doesn't draw it yet
-		walker.move(x_change, y_change)
+		#walker.move(x_change, y_change)
 
 		new_x = x + x_change
 		new_y = y + y_change
